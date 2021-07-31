@@ -1,20 +1,22 @@
 import Icon from './restaurant.jpeg';
-import './style.css';
 
-function loader() {
+function homePage() {
     const content = document.querySelector('#content');
+    const container = document.createElement('div');
+    container.classList.add('container');
+    content.appendChild(container);
 
     const title = document.createElement('h1');
     title.textContent = 'Tom\'s Diner';
-    content.appendChild(title);
+    container.appendChild(title);
 
     const image = new Image;
     image.src = Icon;
     image.alt = 'restaurant';
-    content.appendChild(image);
+    container.appendChild(image);
 
     const text = document.createElement('p');
     text.innerHTML = '<br><br>Folks, come on down to Tom\'s Diner! An eatery for all! We\'ve got food! Drink! Chairs!<br><br>You name it, we\'ve got it - that\'s the Tom\'s Diner guarantee!'
-    content.appendChild(text);}
+    container.appendChild(text);}
     
-export {loader};
+export {homePage};
